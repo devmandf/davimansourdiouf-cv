@@ -47,7 +47,7 @@
                 <a href="#portfolio" class="block py-2 text-text-secondary">Portfolio</a>
                 <a href="#services" class="block py-2 text-text-secondary">Services</a>
                 <a href="#contact" class="block py-2 text-text-secondary">Contact</a>
-                <button class="btn-primary w-full mt-4">Démarrer Mon Projet</button>
+                <a href="#contact" class="btn-primary w-full mt-4 block text-center">Démarrer Mon Projet</a>
             </div>
         </div>
     </nav>
@@ -1458,17 +1458,31 @@
 
     <!-- Sticky CTA (Mobile) -->
     <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 md:hidden z-40" id="sticky-cta">
-        <button class="btn-primary w-full">
+        <a href="#contact" class="btn-primary w-full block text-center">
             Démarrer Mon Projet
-        </button>
+        </a>
     </div>
 
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // Toggle menu on button click
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent the click from reaching the document
             mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.classList.contains('hidden') && 
+                !mobileMenu.contains(e.target) && 
+                e.target !== mobileMenuBtn && 
+                !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
         });
 
         // FAQ Toggle
