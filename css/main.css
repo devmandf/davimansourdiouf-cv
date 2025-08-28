@@ -1403,16 +1403,12 @@ body {
   padding-bottom: 4rem;
 }
 
-.pt-20{
-  padding-top: 5rem;
+.pt-32{
+  padding-top: 8rem;
 }
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pt-32{
-  padding-top: 8rem;
 }
 
 .text-left{
@@ -1850,6 +1846,10 @@ body {
 
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+.hover\:opacity-80:hover{
+  opacity: 0.8;
 }
 
 .hover\:shadow-2xl:hover{
