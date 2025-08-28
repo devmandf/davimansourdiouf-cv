@@ -24,6 +24,7 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors">Accueil</a>
                     <a href="#about" class="text-text-secondary hover:text-primary transition-colors">À Propos</a>
                     <a href="#portfolio" class="text-text-secondary hover:text-primary transition-colors">Portfolio</a>
                     <a href="#services" class="text-text-secondary hover:text-primary transition-colors">Services</a>
@@ -43,6 +44,7 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-white border-t border-border" id="mobile-menu">
             <div class="px-4 py-2 space-y-2">
+                <a href="#hero" class="block py-2 text-text-secondary">Accueil</a>
                 <a href="#about" class="block py-2 text-text-secondary">À Propos</a>
                 <a href="#portfolio" class="block py-2 text-text-secondary">Portfolio</a>
                 <a href="#services" class="block py-2 text-text-secondary">Services</a>
@@ -1440,12 +1442,7 @@
         </div>
     </footer>
 
-    <!-- Sticky CTA (Mobile) -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border p-4 md:hidden z-40" id="sticky-cta">
-        <a href="#contact" class="btn-primary w-full block text-center">
-            Démarrer Mon Projet
-        </a>
-    </div>
+
 
     <!-- JavaScript -->
     <script>
@@ -1467,6 +1464,13 @@
                 !mobileMenuBtn.contains(e.target)) {
                 mobileMenu.classList.add('hidden');
             }
+        });
+
+        // Close mobile menu when clicking on navigation links
+        document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
         });
 
         // FAQ Toggle
@@ -1678,23 +1682,7 @@
             this.reset();
         });
 
-        // Sticky CTA visibility on mobile
-        let lastScrollTop = 0;
-        const stickyCTA = document.getElementById('sticky-cta');
-        
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                stickyCTA.style.transform = 'translateY(100%)';
-            } else {
-                // Scrolling up
-                stickyCTA.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollTop = scrollTop;
-        });
+
     </script>
 <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
