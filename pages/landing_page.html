@@ -772,34 +772,64 @@
                 
                 <div class="grid md:grid-cols-3 gap-6 mb-8">
                     <!-- Project Type -->
-                    <div>
+                    <div class="relative">
                         <label class="block text-sm font-semibold text-text-primary mb-3">Type de Projet</label>
-                        <select class="form-input w-full" id="project-type">
-                            <option value="landing">Site Vitrine (1-5 pages)</option>
-                            <option value="business">Site Business (6-15 pages)</option>
-                            <option value="ecommerce">E-commerce</option>
-                            <option value="webapp">Application Web</option>
-                        </select>
+                        <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="project-type-btn">
+                            <span class="flex items-center justify-between">
+                                <span class="text-text-primary">Site Vitrine (1-5 pages)</span>
+                                <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="absolute z-10 w-full mt-1 bg-white border-2 border-gray-200 rounded-xl shadow-xl opacity-0 invisible transform -translate-y-2 transition-all duration-300" id="project-type-dropdown">
+                            <div class="py-2">
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="landing">Site Vitrine (1-5 pages)</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="business">Site Business (6-15 pages)</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="ecommerce">E-commerce</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="webapp">Application Web</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Design Complexity -->
-                    <div>
+                    <div class="relative">
                         <label class="block text-sm font-semibold text-text-primary mb-3">Complexité Design</label>
-                        <select class="form-input w-full" id="design-complexity">
-                            <option value="simple">Simple (Template adapté)</option>
-                            <option value="custom">Sur-mesure</option>
-                            <option value="premium">Premium + Branding</option>
-                        </select>
+                        <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="design-complexity-btn">
+                            <span class="flex items-center justify-between">
+                                <span class="text-text-primary">Simple (Template adapté)</span>
+                                <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="absolute z-10 w-full mt-1 bg-white border-2 border-gray-200 rounded-xl shadow-xl opacity-0 invisible transform -translate-y-2 transition-all duration-300" id="design-complexity-dropdown">
+                            <div class="py-2">
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="simple">Simple (Template adapté)</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="custom">Sur-mesure</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="premium">Premium + Branding</div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Timeline -->
-                    <div>
+                    <div class="relative">
                         <label class="block text-sm font-semibold text-text-primary mb-3">Délai Souhaité</label>
-                        <select class="form-input w-full" id="timeline">
-                            <option value="standard">Standard (8-10 semaines)</option>
-                            <option value="fast">Rapide (4-6 semaines)</option>
-                            <option value="express">Express (2-3 semaines)</option>
-                        </select>
+                        <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="timeline-btn">
+                            <span class="flex items-center justify-between">
+                                <span class="text-text-primary">Standard (8-10 semaines)</span>
+                                <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="absolute z-10 w-full mt-1 bg-white border-2 border-gray-200 rounded-xl shadow-xl opacity-0 invisible transform -translate-y-2 transition-all duration-300" id="timeline-dropdown">
+                            <div class="py-2">
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="standard">Standard (8-10 semaines)</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="fast">Rapide (4-6 semaines)</div>
+                                <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="express">Express (2-3 semaines)</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1475,11 +1505,120 @@
             });
         });
 
+        // Custom Dropdown Functionality
+        function initializeDropdowns() {
+            const dropdowns = [
+                { btn: 'project-type-btn', dropdown: 'project-type-dropdown' },
+                { btn: 'design-complexity-btn', dropdown: 'design-complexity-dropdown' },
+                { btn: 'timeline-btn', dropdown: 'timeline-dropdown' }
+            ];
+
+            dropdowns.forEach(({ btn, dropdown }) => {
+                const button = document.getElementById(btn);
+                const dropdownMenu = document.getElementById(dropdown);
+                
+                if (!button || !dropdownMenu) return;
+                
+                const arrow = button.querySelector('svg');
+
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Close all other dropdowns
+                    dropdowns.forEach(({ dropdown: otherDropdown }) => {
+                        if (otherDropdown !== dropdown) {
+                            const otherMenu = document.getElementById(otherDropdown);
+                            const otherButton = document.getElementById(otherDropdown.replace('-dropdown', '-btn'));
+                            if (otherMenu && otherButton) {
+                                const otherArrow = otherButton.querySelector('svg');
+                                otherMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                                otherMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                                if (otherArrow) otherArrow.classList.remove('rotate-180');
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    const isOpen = dropdownMenu.classList.contains('opacity-100');
+                    
+                    if (isOpen) {
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                    } else {
+                        dropdownMenu.classList.remove('opacity-0', 'invisible', '-translate-y-2');
+                        dropdownMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        if (arrow) arrow.classList.add('rotate-180');
+                    }
+                });
+
+                // Handle option selection
+                dropdownMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('cursor-pointer')) {
+                        const selectedText = e.target.textContent;
+                        const selectedValue = e.target.getAttribute('data-value');
+                        
+                        // Update button text
+                        const buttonText = button.querySelector('span:first-child');
+                        if (buttonText) buttonText.textContent = selectedText;
+                        
+                        // Store selected value
+                        button.setAttribute('data-selected', selectedValue);
+                        
+                        // Close dropdown
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                        
+                        // Trigger price update
+                        updatePrice();
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.relative')) {
+                    dropdowns.forEach(({ dropdown }) => {
+                        const dropdownMenu = document.getElementById(dropdown);
+                        const button = document.getElementById(dropdown.replace('-dropdown', '-btn'));
+                        if (dropdownMenu && button) {
+                            const arrow = button.querySelector('svg');
+                            dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                            dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                            if (arrow) arrow.classList.remove('rotate-180');
+                        }
+                    });
+                }
+            });
+
+            // Initialize default values
+            const projectTypeBtn = document.getElementById('project-type-btn');
+            const designComplexityBtn = document.getElementById('design-complexity-btn');
+            const timelineBtn = document.getElementById('timeline-btn');
+            
+            if (projectTypeBtn) projectTypeBtn.setAttribute('data-selected', 'landing');
+            if (designComplexityBtn) designComplexityBtn.setAttribute('data-selected', 'simple');
+            if (timelineBtn) timelineBtn.setAttribute('data-selected', 'standard');
+        }
+
+        // Initialize dropdowns when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeDropdowns);
+        } else {
+            initializeDropdowns();
+        }
+
         // Pricing Calculator
         function updatePrice() {
-            const projectType = document.getElementById('project-type').value;
-            const designComplexity = document.getElementById('design-complexity').value;
-            const timeline = document.getElementById('timeline').value;
+            // Get selected values from custom dropdowns
+            const projectTypeBtn = document.getElementById('project-type-btn');
+            const designComplexityBtn = document.getElementById('design-complexity-btn');
+            const timelineBtn = document.getElementById('timeline-btn');
+            
+            const projectType = projectTypeBtn.getAttribute('data-selected') || 'landing';
+            const designComplexity = designComplexityBtn.getAttribute('data-selected') || 'simple';
+            const timeline = timelineBtn.getAttribute('data-selected') || 'standard';
             
             let basePrice = 500000; // Base price in CFA
             
@@ -1505,21 +1644,14 @@
                 'express': 1.6
             };
             
-            if (projectType && designComplexity && timeline) {
-                const finalPrice = basePrice * 
-                    (projectMultipliers[projectType] || 1) * 
-                    (designMultipliers[designComplexity] || 1) * 
-                    (timelineMultipliers[timeline] || 1);
-                
-                document.getElementById('calculated-price').textContent = 
-                    `${Math.round(finalPrice).toLocaleString()} CFA`;
-            }
+            const finalPrice = basePrice * 
+                (projectMultipliers[projectType] || 1) * 
+                (designMultipliers[designComplexity] || 1) * 
+                (timelineMultipliers[timeline] || 1);
+            
+            document.getElementById('calculated-price').textContent = 
+                `${Math.round(finalPrice).toLocaleString()} CFA`;
         }
-
-        // Add event listeners to pricing calculator
-        document.getElementById('project-type').addEventListener('change', updatePrice);
-        document.getElementById('design-complexity').addEventListener('change', updatePrice);
-        document.getElementById('timeline').addEventListener('change', updatePrice);
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
