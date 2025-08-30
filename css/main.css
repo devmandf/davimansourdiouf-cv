@@ -1543,6 +1543,11 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), #f5f3ff var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-sky-50{
+  --tw-gradient-to: rgb(240 249 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #f0f9ff var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-accent{
   --tw-gradient-to: #f97316 var(--tw-gradient-to-position);
 }
@@ -1653,6 +1658,10 @@ body {
 
 .to-yellow-500\/5{
   --tw-gradient-to: rgb(234 179 8 / 0.05) var(--tw-gradient-to-position);
+}
+
+.to-blue-50{
+  --tw-gradient-to: #eff6ff var(--tw-gradient-to-position);
 }
 
 .object-contain{
