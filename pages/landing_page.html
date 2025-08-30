@@ -1470,8 +1470,8 @@
 
 
 
-    <!-- JavaScript -->
     <script>
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1608,11 +1608,17 @@
 
             // Close dropdowns when clicking outside
             document.addEventListener('click', function(e) {
-                if (!e.target.closest('.relative')) {
+                let clickedInside = dropdowns.some(({ btn, dropdown }) => {
+                    const button = document.getElementById(btn);
+                    const menu = document.getElementById(dropdown);
+                    return (button && button.contains(e.target)) || (menu && menu.contains(e.target));
+                });
+
+                if (!clickedInside) {
                     dropdowns.forEach(({ dropdown }) => {
                         const dropdownMenu = document.getElementById(dropdown);
                         const button = document.getElementById(dropdown.replace('-dropdown', '-btn'));
-                        if (dropdownMenu && button) {
+                        if (dropdownMenu && button && dropdownMenu.classList.contains('opacity-100')) {
                             const arrow = button.querySelector('svg');
                             dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
                             dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
