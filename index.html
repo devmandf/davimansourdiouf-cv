@@ -783,12 +783,12 @@
                         
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold text-text-primary mb-2">Nom*</label>
-                                <input type="text" name="Nom complet" class="form-input w-full" placeholder="Votre nom" required />
+                                <label for="contact-name" class="block text-sm font-semibold text-text-primary mb-2">Nom*</label>
+                                <input id="contact-name" type="text" name="Nom complet" class="form-input w-full" placeholder="Votre nom" required />
                             </div>
                             <div>
-                                <label class="block text-sm font-semibold text-text-primary mb-2">Email *</label>
-                                <input type="email" name="Email" class="form-input w-full" placeholder="votre@email.com" required />
+                                <label for="contact-email" class="block text-sm font-semibold text-text-primary mb-2">Email *</label>
+                                <input id="contact-email" type="email" name="Email" class="form-input w-full" placeholder="votre@email.com" required />
                             </div>
                         </div>
                         
@@ -851,8 +851,8 @@
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-semibold text-text-primary mb-2">Décrivez votre projet *</label>
-                            <textarea name="Message" class="form-input w-full h-32 resize-none" placeholder="Décrivez vos besoins, objectifs, et toute information importante pour votre projet..." required></textarea>
+                            <label for="contact-message" class="block text-sm font-semibold text-text-primary mb-2">Décrivez votre projet *</label>
+                            <textarea id="contact-message" name="Message" class="form-input w-full h-32 resize-none" placeholder="Décrivez vos besoins, objectifs, et toute information importante pour votre projet..." required></textarea>
                         </div>
                         
                         <button type="submit" class="btn-primary w-full text-lg py-4">
