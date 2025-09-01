@@ -775,7 +775,7 @@
                     <form class="space-y-6" id="contact-form" action="https://formsubmit.co/devmandf@gmail.com" method="POST" novalidate>
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-semibold text-text-primary mb-2">Nom complet *</label>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Nom*</label>
                                 <input type="text" name="Nom complet" class="form-input w-full" placeholder="Votre nom" required />
                             </div>
                             <div>
@@ -799,7 +799,7 @@
                             <input type="hidden" name="_subject" value="Nouvelle demande de contact - Formulaire Portfolio">
                             <input type="hidden" name="_next" value="https://mansourdiouf.com/merci.html">
                             <input type="hidden" name="_captcha" value="false">
-                            <label class="block text-sm font-semibold text-text-primary mb-3">Type de projet *</label>
+                            <label class="block text-sm font-semibold text-text-primary mb-3">Type de projet </label>
                             <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="contact-project-type-btn">
                                 <span class="flex items-center justify-between">
                                     <span class="text-text-primary">Sélectionnez votre projet</span>
@@ -996,8 +996,9 @@
     </footer>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="fixed inset-0 bg-black/82 flex items-center justify-center z-50 hidden transition-opacity duration-300">
-        <div class="bg-black/82 backdrop-blur-sm rounded-[22px] p-8 max-w-md w-full mx-4 relative shadow-2xl transform transition-all duration-300 scale-95 hover:scale-100">
+    <div id="success-modal" class="fixed inset-0 bg-black/90 z-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div class="min-h-full flex items-center justify-center p-4">
+        <div class="bg-black rounded-[22px] p-8 max-w-md w-full mx-4 relative shadow-2xl transform transition-all duration-300 scale-95 hover:scale-100 border border-gray-800">
             <div class="text-center">
                 <div class="w-20 h-20 bg-[#99FF8C] bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner border border-[#99FF8C] border-opacity-30">
                     <svg class="w-12 h-12 text-[#99FF8C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1006,12 +1007,38 @@
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-2">Message envoyé !</h3>
                 <p class="text-white text-opacity-90 mb-6">Votre message a bien été envoyé. Je vous recontacterai dès que possible.</p>
-                <button id="close-modal" class="bg-[#99FF8C] text-gray-900 px-8 py-2.5 rounded-xl hover:shadow-lg hover:shadow-[#99FF8C]/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#99FF8C] focus:ring-offset-2 font-medium">
+                <button id="close-modal" class="bg-[#99FF8C] text-gray-900 px-8 py-2.5 rounded-xl hover:shadow-lg hover:shadow-[#99FF8C]/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#99FF8C] focus:ring-offset-2 font-bold">
                     Fermer
                 </button>
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- Bouton de test temporaire -->
+    <button onclick="
+        const modal = document.getElementById('success-modal');
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+        document.body.style.overflow = 'hidden';
+    " style="
+        display: none;  /* Masque le bouton */
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        padding: 12px 20px;
+        background: #99FF8C;
+        color: #1a1a1a;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: all 0.2s ease;
+    " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+        Tester la modale
+    </button>
 
     <script>
 
@@ -1367,15 +1394,65 @@
             });
         });
 
-        // Form submission
+        // Initialize contact form
         const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('success-message');
         const errorMessage = document.getElementById('error-message');
+        const successMessage = document.getElementById('success-message');
+
+        // Fonction de validation des champs obligatoires
+        function validateRequiredFields() {
+            let isValid = true;
+            
+            // Réinitialiser les erreurs
+            document.querySelectorAll('.error-message').forEach(el => el.remove());
+            document.querySelectorAll('.border-red-500').forEach(el => {
+                el.classList.remove('border-red-500');
+            });
+            
+            // Valider les champs obligatoires
+            const requiredFields = [
+                { id: 'contact-name', name: 'Nom complet' },
+                { id: 'contact-email', name: 'Email' },
+                { id: 'contact-message', name: 'Message' }
+            ];
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field.id);
+                if (!input.value.trim()) {
+                    input.classList.add('border-red-500');
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'error-message text-red-400 text-sm mt-1';
+                    errorDiv.textContent = `${field.name} est obligatoire`;
+                    input.parentNode.insertBefore(errorDiv, input.nextSibling);
+                    isValid = false;
+                } else if (field.id === 'contact-email') {
+                    // Validation basique de l'email
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(input.value.trim())) {
+                        input.classList.add('border-red-500');
+                        const errorDiv = document.createElement('div');
+                        errorDiv.className = 'error-message text-red-400 text-sm mt-1';
+                        errorDiv.textContent = 'Veuillez entrer un email valide';
+                        input.parentNode.insertBefore(errorDiv, input.nextSibling);
+                        isValid = false;
+                    }
+                }
+            });
+            
+            return isValid;
+        }
+
         const projectTypeInput = document.getElementById('contact-project-type-input');
 
+        // Handle form submission
         if (contactForm) {
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
+                
+                // Valider les champs obligatoires
+                if (!validateRequiredFields()) {
+                    return; // Arrêter si la validation échoue
+                }
                 
                 // Show loading state
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -1425,27 +1502,44 @@
                     // Show success modal
                     const successModal = document.getElementById('success-modal');
                     if (successModal) {
-                        successModal.classList.remove('hidden');
+                        successModal.classList.add('opacity-100', 'pointer-events-auto');
+                        successModal.classList.remove('opacity-0', 'pointer-events-none');
                         document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-                        
+                            
                         // Close modal when clicking the button
                         const closeButton = document.getElementById('close-modal');
                         if (closeButton) {
                             closeButton.addEventListener('click', function() {
-                                successModal.classList.add('hidden');
+                                successModal.classList.remove('opacity-100', 'pointer-events-auto');
+                                successModal.classList.add('opacity-0', 'pointer-events-none');
                                 document.body.style.overflow = ''; // Re-enable scrolling
                             });
                         }
-                        
+                            
                         // Close when clicking outside the modal
-                        successModal.addEventListener('click', function(e) {
-                            if (e.target === successModal) {
-                                successModal.classList.add('hidden');
-                                document.body.style.overflow = ''; // Re-enable scrolling
+                        const modalContent = document.querySelector('#success-modal > div > div');
+                        document.addEventListener('click', function closeModalOnOutsideClick(e) {
+                            if (successModal.classList.contains('opacity-100') && 
+                                !modalContent.contains(e.target) && 
+                                e.target === successModal) {
+                                
+                                successModal.classList.remove('opacity-100', 'pointer-events-auto');
+                                successModal.classList.add('opacity-0', 'pointer-events-none');
+                                document.body.style.overflow = '';
+                                document.removeEventListener('click', closeModalOnOutsideClick);
+                            }
+                        });
+                            
+                        // Also close on Escape key
+                        document.addEventListener('keydown', function(e) {
+                            if (e.key === 'Escape' && successModal.classList.contains('opacity-100')) {
+                                successModal.classList.remove('opacity-100', 'pointer-events-auto');
+                                successModal.classList.add('opacity-0', 'pointer-events-none');
+                                document.body.style.overflow = '';
                             }
                         });
                     }
-                    
+                        
                     // Reset button after showing modal
                     submitBtn.innerHTML = originalBtnText;
                     submitBtn.disabled = false;
