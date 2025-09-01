@@ -996,17 +996,17 @@
     </footer>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
+    <div id="success-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div class="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 max-w-md w-full mx-4 relative shadow-2xl border border-gray-100 transform transition-all duration-300 scale-95 hover:scale-100">
             <div class="text-center">
-                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-50 rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner border border-green-50">
                     <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
                 <p class="text-gray-600 mb-6">Votre message a bien été envoyé. Je vous recontacterai dès que possible.</p>
-                <button id="close-modal" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+                <button id="close-modal" class="bg-gradient-to-r from-primary to-primary-600 text-white px-8 py-2.5 rounded-xl hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                     Fermer
                 </button>
             </div>
