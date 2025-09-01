@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdaviportf6336back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -25,11 +28,11 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors">Accueil</a>
-                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors">À Propos</a>
-                    <a href="#portfolio" class="text-text-secondary hover:text-primary transition-colors">Portfolio</a>
-                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors hidden">Services</a>
-                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">ACCUEIL</a>
+                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">À PROPOS</a>
+                    <a href="#portfolio" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">PORTFOLIO</a>
+                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold hidden">SERVICES</a>
+                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">CONTACT</a>
                     <a href="#contact" class="btn-primary">Démarrer Mon Projet</a>
                 </div>
                 
@@ -43,16 +46,32 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white border-t border-border" id="mobile-menu">
-            <div class="px-4 py-2 space-y-2">
-                <a href="#hero" class="block py-2 text-text-secondary">Accueil</a>
-                <a href="#about" class="block py-2 text-text-secondary">À Propos</a>
-                <a href="#portfolio" class="block py-2 text-text-secondary">Portfolio</a>
-                <a href="#services" class="py-2 text-text-secondary hidden">Services</a>
-                <a href="#contact" class="block py-2 text-text-secondary">Contact</a>
-                <a href="#contact" class="btn-primary w-full mt-4 block text-center">Démarrer Mon Projet</a>
+        <div class="md:hidden fixed inset-0 left-auto w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 h-screen" id="mobile-menu">
+            <div class="h-full flex flex-col bg-white">
+                <div class="flex justify-end p-4 bg-white">
+                    <button id="close-mobile-menu" class="text-text-secondary hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="px-6 py-4 space-y-4 flex-1 overflow-y-auto bg-white">
+                    <a href="#hero" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">Accueil</a>
+                    <a href="#about" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">À Propos</a>
+                    <a href="#experience" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">Expériences</a>
+                    <a href="#portfolio" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">Réalisations phares</a>
+                    <a href="#skills" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">Compétences</a>
+                    <a href="#contact" class="block py-3 px-4 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-text-primary font-medium">Contact</a>
+                </div>
+                <div class="p-4 bg-white border-t border-gray-200">
+                    <a href="#contact" class="block w-full py-3 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors duration-200 font-medium text-center">
+                        Démarrer Mon Projet
+                    </a>
+                </div>
             </div>
         </div>
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
     </nav>
 
     <!-- Hero Section -->
@@ -63,12 +82,14 @@
                 <div class="space-y-8">
                     <div class="space-y-4">
                         <h1 class="text-4xl lg:text-6xl font-extrabold text-text-primary leading-tight">
-                            Davi Mansour Diouf
-                            <span class="text-gradient block text-3xl lg:text-5xl mt-4">Développeur Web Full-Stack</span>
-                            <span class="text-accent block text-2xl lg:text-4xl mt-2">Designer Graphique</span>
+                            <div class="block lg:inline-block">
+                                <div class="text-gradient text-3xl lg:text-5xl lg:block">Développeur Web Full-Stack</div>
+                                <div class="text-orange-500 font-bold text-3xl lg:text-5xl lg:mt-2">&</div>
+                            </div>
+                            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-accent to-accent-600 block text-2xl lg:text-4xl mt-2">Designer Graphique</span>
                         </h1>
                         <p class="text-xl text-text-secondary leading-relaxed">
-                            Développeur web passionné par la création d'expériences numériques innovantes, je combine une formation en design graphique avec des compétences techniques en développement full-stack.
+                            passionné par la création d'expériences numériques innovantes, je combine une formation en design graphique avec des compétences techniques en développement full-stack.
                         </p>
                     </div>
                     
@@ -90,13 +111,13 @@
                     
                     <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="btn-primary text-lg px-8 py-4 text-center">
+                        <a href="#contact" class="btn-primary text-lg px-10 py-4 text-center sm:flex-1">
                             <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
                             Démarrer Mon Projet
                         </a>
-                        <a href="public/dmd%20CV%20-%2006%20Août%202025.pdf" download class="bg-primary hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center">
+                        <a href="public/dmd%20CV%20-%2006%20Août%202025.pdf" download class="bg-primary hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center w-full sm:w-auto sm:px-8">
                             <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
@@ -597,7 +618,7 @@
     </section>
 
     <!-- Skills Matrix Section -->
-    <section class="py-20 bg-gradient-to-br from-slate-50 via-emerald-50 to-green-50 relative overflow-hidden">
+    <section id="skills" class="py-20 bg-gradient-to-br from-slate-50 via-emerald-50 to-green-50 relative overflow-hidden">
         <!-- Background decoration -->
         <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5"></div>
         <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-emerald/10 to-green/10 rounded-full blur-xl"></div>
@@ -1053,28 +1074,59 @@
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+        const body = document.body;
         
-        // Toggle menu on button click
+        // Fonction pour ouvrir le menu
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            body.style.overflow = 'hidden';
+        }
+        
+        // Fonction pour fermer le menu
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+            body.style.overflow = '';
+        }
+        
+        // Ouvrir le menu au clic sur le bouton
         mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent the click from reaching the document
-            mobileMenu.classList.toggle('hidden');
+            e.stopPropagation();
+            openMobileMenu();
         });
         
-        // Close menu when clicking outside
+        // Fermer le menu avec le bouton de fermeture
+        closeMobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMobileMenu();
+        });
+        
+        // Fermer le menu en cliquant en dehors
         document.addEventListener('click', function(e) {
-            if (!mobileMenu.classList.contains('hidden') && 
-                !mobileMenu.contains(e.target) && 
-                e.target !== mobileMenuBtn && 
-                !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
+            // Vérifier si le clic est en dehors du menu et du bouton d'ouverture
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                closeMobileMenu();
             }
         });
-
-        // Close mobile menu when clicking on navigation links
+        
+        // Éviter la propagation du clic à l'intérieur du menu
+        mobileMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Fermer le menu au clic sur les liens de navigation
         document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', closeMobileMenu);
+        });
+        
+        // Fermer le menu avec la touche Échap
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+                closeMobileMenu();
+            }
         });
 
         // FAQ Toggle

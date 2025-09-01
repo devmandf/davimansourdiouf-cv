@@ -6,6 +6,9 @@ module.exports = {
     "./js/*.js"
   ],
   theme: {
+    fontFamily: {
+      'jura': ['Jura', 'sans-serif'],
+    },
     extend: {
       colors: {
         // Primary Colors - Technical credibility + trust foundation
