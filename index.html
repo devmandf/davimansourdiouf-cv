@@ -12,6 +12,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Effet de survol pour le menu mobile */
+  #mobile-menu a:hover {
+    background-color: rgba(109, 60, 255, 0.26) !important;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Animation personnalisée pour le soulignement */
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:not(:hover)::after {
+    width: 0;
+    left: 0;
+    right: auto;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  /* Style pour le bouton de fermeture du menu mobile */
+  #mobile-menu:not(.translate-x-full) #close-mobile-menu {
+    transform: translateX(-1.5rem) !important;
+  }
+</style>
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdaviportf6336back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
@@ -28,11 +68,11 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">ACCUEIL</a>
-                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">À PROPOS</a>
-                    <a href="#portfolio" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">PORTFOLIO</a>
-                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold hidden">SERVICES</a>
-                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors font-['Lunasima'] font-bold">CONTACT</a>
+                    <a href="#hero" class="nav-link text-text-secondary hover:text-primary font-['Lunasima'] font-medium">ACCUEIL</a>
+                    <a href="#about" class="nav-link text-text-secondary hover:text-primary font-['Lunasima'] font-medium">À PROPOS</a>
+                    <a href="#portfolio" class="nav-link text-text-secondary hover:text-primary font-['Lunasima'] font-medium">PORTFOLIO</a>
+                    <a href="#services" class="nav-link text-text-secondary hover:text-primary font-['Lunasima'] font-medium hidden">SERVICES</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary font-['Lunasima'] font-medium">CONTACT</a>
                     <a href="#contact" class="btn-primary">Démarrer Mon Projet</a>
                 </div>
                 
@@ -45,11 +85,14 @@
             </div>
         </div>
         
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
         <!-- Mobile Menu -->
         <div class="md:hidden fixed inset-0 left-auto w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 h-screen" id="mobile-menu">
             <div class="h-full flex flex-col bg-white">
                 <div class="flex justify-end p-4 bg-white">
-                    <button id="close-mobile-menu" class="text-text-secondary hover:text-primary">
+                    <button id="close-mobile-menu" class="close-menu-btn text-text-secondary hover:text-primary" style="margin-left: -3rem !important;">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
@@ -1082,14 +1125,14 @@
         function openMobileMenu() {
             mobileMenu.classList.remove('translate-x-full');
             mobileMenuOverlay.classList.remove('hidden');
-            body.style.overflow = 'hidden';
+            document.body.classList.add('pr-[17px]'); // Compense la largeur de la barre de défilement
         }
         
         // Fonction pour fermer le menu
         function closeMobileMenu() {
             mobileMenu.classList.add('translate-x-full');
             mobileMenuOverlay.classList.add('hidden');
-            body.style.overflow = '';
+            document.body.classList.remove('pr-[17px]');
         }
         
         // Ouvrir le menu au clic sur le bouton

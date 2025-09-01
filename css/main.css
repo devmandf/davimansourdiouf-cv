@@ -1917,6 +1917,10 @@ body {
   padding-top: 2rem;
 }
 
+.pr-\[17px\]{
+  padding-right: 17px;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1927,22 +1931,6 @@ body {
 
 .font-\[\'Jura\'\]{
   font-family: 'Jura';
-}
-
-.font-jura{
-  font-family: Jura, sans-serif;
-}
-
-.font-sans{
-  font-family: Inter, sans-serif;
-}
-
-.font-\[\'Poppins\'\]{
-  font-family: 'Poppins';
-}
-
-.font-\[\'Sansation\'\]{
-  font-family: 'Sansation';
 }
 
 .font-\[\'Lunasima\'\]{
