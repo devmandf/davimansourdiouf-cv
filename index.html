@@ -773,6 +773,14 @@
                     <h3 class="text-2xl font-bold text-text-primary mb-6">Demande de Devis Gratuit</h3>
                     
                     <form class="space-y-6" id="contact-form" action="https://formsubmit.co/devmandf@gmail.com" method="POST" novalidate>
+                        <!-- Messages d'erreur et de succès -->
+                        <div id="error-message" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4 rounded">
+                            <p>Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.</p>
+                        </div>
+                        <div id="success-message" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-4 rounded">
+                            <p>Votre message a été envoyé avec succès ! Je vous recontacterai dès que possible.</p>
+                        </div>
+                        
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-text-primary mb-2">Nom*</label>
@@ -1411,7 +1419,7 @@
             
             // Valider les champs obligatoires
             const requiredFields = [
-                { id: 'contact-name', name: 'Nom complet' },
+                { id: 'contact-name', name: 'Nom' },
                 { id: 'contact-email', name: 'Email' },
                 { id: 'contact-message', name: 'Message' }
             ];
