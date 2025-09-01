@@ -3,19 +3,1415 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Davi Portfolio</title>
+    <title>Davi Mansour Diouf - Développeur Web Full-Stack & Designer Graphique</title>
+    <meta name="description" content="Développeur Full-Stack et Designer graphique professionnel. Une seule personne pour concevoir ET développer votre site web. Fini les maux de tête de coordination." />
+    <link rel="icon" type="image/webp" href="public/mblue_logo.webp" />
     <link rel="stylesheet" href="css/main.css" />
-    <script>
-        // Redirect to the landing page
-        window.location.href = 'pages/landing_page.html';
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdaviportf6336back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body>
-    <div class="redirect-container">
-        <h1>Redirecting to Davi Portfolio...</h1>
-        <p>If you are not redirected automatically, <a href="pages/landing_page.html">click here</a>.</p>
-    </div>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center hover:opacity-80 transition-opacity">
+                    <img src="public/mblue_logo.webp" alt="Logo" class="w-10 h-10" />
+                    <span class="ml-3 text-xl font-bold text-primary">Davi Mansour Diouf</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors">Accueil</a>
+                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors">À Propos</a>
+                    <a href="#portfolio" class="text-text-secondary hover:text-primary transition-colors">Portfolio</a>
+                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors hidden">Services</a>
+                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+                    <a href="#contact" class="btn-primary">Démarrer Mon Projet</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-border" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#hero" class="block py-2 text-text-secondary">Accueil</a>
+                <a href="#about" class="block py-2 text-text-secondary">À Propos</a>
+                <a href="#portfolio" class="block py-2 text-text-secondary">Portfolio</a>
+                <a href="#services" class="py-2 text-text-secondary hidden">Services</a>
+                <a href="#contact" class="block py-2 text-text-secondary">Contact</a>
+                <a href="#contact" class="btn-primary w-full mt-4 block text-center">Démarrer Mon Projet</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-accent-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl lg:text-6xl font-extrabold text-text-primary leading-tight">
+                            Davi Mansour Diouf
+                            <span class="text-gradient block text-3xl lg:text-5xl mt-4">Développeur Web Full-Stack</span>
+                            <span class="text-accent block text-2xl lg:text-4xl mt-2">Designer Graphique</span>
+                        </h1>
+                        <p class="text-xl text-text-secondary leading-relaxed">
+                            Développeur web passionné par la création d'expériences numériques innovantes, je combine une formation en design graphique avec des compétences techniques en développement full-stack.
+                        </p>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center space-x-6 text-sm text-text-secondary">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Projets livrés à temps</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>100% satisfaction client</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-primary text-lg px-8 py-4 text-center">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            Démarrer Mon Projet
+                        </a>
+                        <a href="public/dmd%20CV%20-%2006%20Août%202025.pdf" download class="bg-primary hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Télécharger CV
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Visual -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-2xl p-8 transform transition-all duration-300 hover:scale-[1.02]">
+                        <div class="space-y-6">
+                            <!-- Code to Design Animation -->
+                            <div class="bg-gray-900 rounded-lg p-4 text-green-400 font-mono text-sm">
+                                <div class="flex items-center space-x-2 mb-2">
+                                    <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                </div>
+                                <div class="space-y-1">
+                                    <div>&lt;div className="hero"&gt;</div>
+                                    <div class="ml-4">&lt;h1&gt;Davi Mansour Diouf&lt;/h1&gt;</div>
+                                    <div class="ml-4">&lt;p className="subtitle"&gt;Full-Stack Web dev &amp; Ui Ux Designer&lt;/p&gt;</div>
+                                    <div>&lt;/div&gt;</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Arrow -->
+                            <div class="flex justify-center">
+                                <svg class="w-8 h-8 text-accent animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Design Result -->
+                            <div class="bg-gradient-to-r from-primary to-accent rounded-lg p-6 text-white text-center transform transition-transform duration-300 hover:scale-105">
+                                <h3 class="text-xl font-bold mb-2">Davi Mansour Diouf</h3>
+                                <p class="text-sm opacity-90">Full-Stack Web dev & Ui Ux Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements -->
+                    <div class="absolute -top-4 -right-4 bg-accent text-white p-3 rounded-full shadow-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Problem Agitation Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-50 via-red-50 to-orange-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5"></div>
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-warning/10 to-error/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-error/10 to-warning/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+                    Vous en avez marre de jongler entre plusieurs prestataires ?
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Découvrez la différence entre l'approche traditionnelle et ma solution intégrée
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Traditional Approach -->
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-red-700 mb-2">Approche Traditionnelle</h3>
+                        <p class="text-red-600">Le cauchemar de la coordination</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-red-700">Coordonner designer + développeur + chef de projet</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-red-700">Délais de 12-16 semaines avec retards</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-red-700">Problèmes de communication entre équipes</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-red-700">Coûts cachés et dépassements de budget</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Davi's Approach -->
+                <div class="bg-success-50 border border-success-200 rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-success-600 mb-2">Mes Compétences Clés</h3>
+                        <p class="text-success-600">Développement Full-Stack & Design Graphique</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-success mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success-700">Développement Full-Stack (Node.js, Express, MongoDB, React, Next.js)</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-success mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success-700">Design Graphique (UI/UX, Adobe Creative Suite, Figma)</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-success mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success-700">Maîtrise des outils IA modernes (ChatGPT, Claude AI, Copilot)</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-success mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-success-700">Bilingue Français/Anglais</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-0">
+        <div class="relative w-full h-96">
+            <video class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline aria-hidden="true">
+                <source src="public/teknoloja.mp4" type="video/mp4" />
+            </video>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <lottie-player
+                    src="public/Hacker icon Lottie 02.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 360px; height: 360px;"
+                    loop
+                    autoplay
+                ></lottie-player>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5"></div>
+        <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-accent/10 to-success/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+                    Cursus
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Mon parcours académique et mes certifications en développement web et design graphique
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Education Item 1 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                </svg>
+                            </div>
+                            <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">Développement Web Full-Stack</h3>
+                        <p class="text-text-secondary font-medium mb-2">Gomycode (Sénégal)</p>
+                        <p class="text-text-secondary text-sm">Web Development Essentials Certificate of Completion</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 2 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-semibold">2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary mb-3 group-hover:text-accent transition-colors">Les Fondamentaux du Développement Web</h3>
+                        <p class="text-text-secondary font-medium mb-2">Gomycode (Sénégal)</p>
+                        <p class="text-text-secondary text-sm">Web Development Essentials Certificate of Completion</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 3 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-success to-success-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                </svg>
+                            </div>
+                            <span class="px-4 py-2 bg-success-100 text-success-700 rounded-full text-sm font-semibold">2023</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary mb-3 group-hover:text-success transition-colors">Bootcamp de Conception Graphique Ultime</h3>
+                        <p class="text-text-secondary font-medium mb-2">Gomycode (Sénégal)</p>
+                        <p class="text-text-secondary text-sm">Ultimate Design Bootcamp Certificate of Completion</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 4 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                                </svg>
+                            </div>
+                            <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">2015</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">Gestion Financière Informatisée</h3>
+                        <p class="text-text-secondary font-medium mb-2">Collège CDI de Montréal (Canada)</p>
+                        <p class="text-text-secondary text-sm">Attestation d'études collégiales</p>
+                    </div>
+                </div>
+                
+                <!-- Education Item 5 -->
+                <div class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100 md:col-span-2 lg:col-span-1">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                                </svg>
+                            </div>
+                            <span class="px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-semibold">2013</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-primary mb-3 group-hover:text-accent transition-colors">Baccalauréat en Techniques Quantitatives d'Économie et de Gestion</h3>
+                        <p class="text-text-secondary font-medium mb-2">Collège Saldia (Sénégal)</p>
+                        <p class="text-text-secondary text-sm">Bachelor's degree in Quantitative Techniques of Economics and Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5"></div>
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+                    Expériences Professionnelles
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Mon parcours professionnel et les projets sur lesquels j'ai travaillé
+                </p>
+            </div>
+            
+            <div class="space-y-8 max-w-5xl mx-auto">
+                <!-- Experience Item 1 -->
+                <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100/50 hover:border-primary/20">
+                    <div class="p-8 relative">
+                        <!-- Gradient overlay -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-primary"></div>
+                        
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex items-start space-x-6 mb-6 lg:mb-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-text-primary mb-2 group-hover:text-primary transition-colors">Développeur WEB Freelance</h3>
+                                    <p class="text-text-secondary font-medium mb-1">SENEGAL</p>
+                                    <span class="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">2023 - 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Conception et développement de sites web responsifs avec React, Framer Motion, Vite, HTML, CSS, JavaScript, Next JS (Exemple : itamax.fr)</span>
+                            </div>
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Réalisation complète de sites internet (architecture frontend et backend, animations fluides, et optimisation des performances)</span>
+                            </div>
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Collaboration avec des clients pour traduire leurs besoins en solutions techniques et design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100/50 hover:border-accent/20">
+                    <div class="p-8 relative">
+                        <!-- Gradient overlay -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-primary to-accent"></div>
+                        
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex items-start space-x-6 mb-6 lg:mb-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-text-primary mb-2 group-hover:text-accent transition-colors">Stagiaire au Service Transit</h3>
+                                    <p class="text-text-secondary font-medium mb-1">SOPASEN (Sénégal)</p>
+                                    <span class="inline-block px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-sm font-semibold">Mars 2022 - Mai 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-accent/20 to-accent/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Déclarant en Douane</span>
+                            </div>
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-accent/20 to-accent/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Remplissage de documents administratifs douaniers, déclaration de marchandises, paiement des droits de douane et des taxes applicables</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 3 -->
+                <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100/50 hover:border-success/20">
+                    <div class="p-8 relative">
+                        <!-- Gradient overlay -->
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-success via-primary to-success"></div>
+                        
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between">
+                            <div class="flex items-start space-x-6 mb-6 lg:mb-0">
+                                <div class="w-16 h-16 bg-gradient-to-br from-success to-success-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-2xl font-bold text-text-primary mb-2 group-hover:text-success transition-colors">Gestionnaire de bureau</h3>
+                                    <p class="text-text-secondary font-medium mb-1">QUÉBEC BILLARD ET DÉCOR (Canada)</p>
+                                    <span class="inline-block px-4 py-2 bg-success-100 text-success-700 rounded-full text-sm font-semibold">Sept 2014 - Déc 2017</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-success/20 to-success/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Service à la clientèle et gestion des marchandises en entrepôt</span>
+                            </div>
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-success/20 to-success/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Livraison à travers le Québec et déchargement de conteneurs à l'aide de chariots élévateurs</span>
+                            </div>
+                            <div class="flex items-start space-x-4 group/item hover:bg-gray-50/50 p-3 rounded-xl transition-colors">
+                                <div class="w-8 h-8 bg-gradient-to-br from-success/20 to-success/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-text-secondary group-hover/item:text-text-primary transition-colors">Annonce des produits sur les plateformes de vente en ligne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-br from-slate-50 via-teal-50 to-cyan-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-cyan-500/5"></div>
+        <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-teal/10 to-cyan/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-cyan/10 to-teal/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+                    Réalisations phares
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Dans cette section, vous trouverez un aperçu de mes réalisations les plus pertinentes, démontrant mes compétences en développement web.
+                </p>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="flex justify-center">
+                <!-- Project 1 - itamax.fr -->
+                <div class="portfolio-item group w-full max-w-2xl" data-category="ecommerce">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <a href="https://itamax.fr" target="_blank" class="block">
+                            <div class="relative overflow-hidden">
+                                <img src="public/itamax_fr.webp" alt="itamax.fr - Cabinet d'architecture" class="w-full h-80 object-cover transition-all duration-300" loading="lazy" />
+                                <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                    <span class="font-semibold">Voir le projet</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-text-primary mb-2">itamax.fr</h3>
+                            <p class="text-text-secondary mb-4">Cabinet d'architecture de référence au Sénégal.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-primary-100 text-primary-700 px-2 py-1 rounded text-xs font-medium">React</span>
+                                <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded text-xs font-medium">Node.js</span>
+                                <span class="bg-success-100 text-success-700 px-2 py-1 rounded text-xs font-medium">MongoDB</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-text-secondary">
+                                    <span class="font-semibold text-success">+150%</span> visibilité
+                                </div>
+                                <a href="https://itamax.fr" target="_blank" class="text-primary hover:text-primary-700 font-medium text-sm">
+                                    Visiter le site →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-50 via-emerald-50 to-green-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5"></div>
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-emerald/10 to-green/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-green/10 to-emerald/10 rounded-full blur-xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+                    Mes Compétences Techniques
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Une expertise complète qui couvre tous les aspects de votre projet web
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Skills Chart -->
+                <div class="relative">
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold text-text-primary mb-6 text-center">Niveau d'Expertise</h3>
+                        
+                        <!-- Skills Bars -->
+                        <div class="space-y-6">
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-text-primary">React / Next.js</span>
+                                    <span class="text-primary font-bold">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-text-primary">Node.js / Python</span>
+                                    <span class="text-primary font-bold">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-text-primary">UI/UX Design</span>
+                                    <span class="text-accent font-bold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-accent h-3 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-text-primary">Bases de Données</span>
+                                    <span class="text-primary font-bold">88%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-text-primary">Branding / Graphisme</span>
+                                    <span class="text-accent font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-accent h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technology Stack -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 space-y-8">
+                        <h3 class="text-xl font-bold text-text-primary mb-6">Stack Technologique</h3>
+                        
+                        <!-- Frontend -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                Frontend
+                            </h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-lg font-medium">React</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-lg font-medium">Next.js</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-lg font-medium">TypeScript</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-2 rounded-lg font-medium">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Backend -->
+                        <div class="mb-8">
+                            <h4 class="text-lg font-semibold text-primary mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                                </svg>
+                                Backend
+                            </h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-green-100 text-green-700 px-3 py-2 rounded-lg font-medium">Node.js</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-2 rounded-lg font-medium">Python</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-2 rounded-lg font-medium">Express</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-2 rounded-lg font-medium">Django</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Design -->
+                        <div>
+                            <h4 class="text-lg font-semibold text-accent mb-4 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                </svg>
+                                Design
+                            </h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-orange-100 text-orange-700 px-3 py-2 rounded-lg font-medium">Figma</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-2 rounded-lg font-medium">Adobe Creative</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-2 rounded-lg font-medium">Sketch</span>
+                                <span class="bg-orange-100 text-orange-700 px-3 py-2 rounded-lg font-medium">Prototyping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Autres Compétences -->
+                <div class="mt-12 bg-white rounded-2xl shadow-lg p-8 lg:col-span-2">
+                <h3 class="text-2xl font-bold text-text-primary mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6h2m7-6h2m2 3h2m-4 3h4M7 7h10"/>
+                    </svg>
+                    Autres Compétences
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Gestion de Projet</span>
+                    <span class="bg-accent-100 text-accent-700 px-4 py-2 rounded-full text-sm font-medium">SEO</span>
+                    <span class="bg-success-100 text-success-700 px-4 py-2 rounded-full text-sm font-medium">IA Générative</span>
+                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Git/GitHub</span>
+                    <span class="bg-accent-100 text-accent-700 px-4 py-2 rounded-full text-sm font-medium">Responsive Design</span>
+                    <span class="bg-success-100 text-success-700 px-4 py-2 rounded-full text-sm font-medium">Montage Audio</span>
+                    <span class="bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Suite Microsoft Office</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-yellow-50 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-yellow-500/5"></div>
+        <div class="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-amber/10 to-yellow/10 rounded-full blur-xl"></div>
+        <div class="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-br from-yellow/10 to-amber/10 rounded-full blur-xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-br from-amber/5 to-yellow/5 rounded-full blur-2xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">
+                    Prêt à démarrer votre projet ?
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Contactez-moi dès aujourd'hui pour une consultation gratuite et un devis personnalisé
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Demande de Devis Gratuit</h3>
+                    
+                    <form class="space-y-6" id="contact-form" action="https://formsubmit.co/devmandf@gmail.com" method="POST" novalidate>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Nom complet *</label>
+                                <input type="text" name="Nom complet" class="form-input w-full" placeholder="Votre nom" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Email *</label>
+                                <input type="email" name="Email" class="form-input w-full" placeholder="votre@email.com" required />
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Téléphone</label>
+                                <input type="tel" name="Téléphone" class="form-input w-full" placeholder="+221 XX XXX XX XX" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Entreprise</label>
+                                <input type="text" name="Entreprise" class="form-input w-full" placeholder="Nom de votre entreprise" />
+                            </div>
+                        </div>
+                        
+                        <div class="relative">
+                            <input type="hidden" name="_subject" value="Nouvelle demande de contact - Formulaire Portfolio">
+                            <input type="hidden" name="_next" value="https://mansourdiouf.com/merci.html">
+                            <input type="hidden" name="_captcha" value="false">
+                            <label class="block text-sm font-semibold text-text-primary mb-3">Type de projet *</label>
+                            <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="contact-project-type-btn">
+                                <span class="flex items-center justify-between">
+                                    <span class="text-text-primary">Sélectionnez votre projet</span>
+                                    <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="absolute z-10 w-full mt-1 bg-white border-2 border-gray-200 rounded-xl shadow-xl opacity-0 invisible transform -translate-y-2 transition-all duration-300" id="contact-project-type-dropdown">
+                                <div class="py-2">
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="landing">Site vitrine (1-5 pages)</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="business">Site business (6-15 pages)</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="ecommerce">E-commerce</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="webapp">Application web</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="redesign">Refonte de site existant</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="other">Autre (préciser dans le message)</div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="project_type" id="contact-project-type-input" required>
+                        </div>
+                        
+                        <div class="relative">
+                            <label class="block text-sm font-semibold text-text-primary mb-3">Budget estimé</label>
+                            <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="contact-budget-btn">
+                                <span class="flex items-center justify-between">
+                                    <span class="text-text-primary">Sélectionnez votre budget</span>
+                                    <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="absolute z-10 w-full mt-1 bg-white border-2 border-gray-200 rounded-xl shadow-xl opacity-0 invisible transform -translate-y-2 transition-all duration-300" id="contact-budget-dropdown">
+                                <div class="py-2">
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="500k-1m">500K - 1M CFA</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="1m-2m">1M - 2M CFA</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="2m-5m">2M - 5M CFA</div>
+                                    <div class="px-4 py-3 hover:bg-primary hover:text-white cursor-pointer transition-colors duration-200 rounded-lg mx-2" data-value="5m+">Plus de 5M CFA</div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="budget" id="contact-budget-input">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Décrivez votre projet *</label>
+                            <textarea name="Message" class="form-input w-full h-32 resize-none" placeholder="Décrivez vos besoins, objectifs, et toute information importante pour votre projet..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full text-lg py-4">
+                            <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                            Envoyer ma demande
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <!-- Contact Methods -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-text-primary mb-6">Autres moyens de contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Email</h4>
+                                    <p class="text-text-secondary">devmandf@gmail.com</p>
+                                    <p class="text-sm text-text-secondary">Réponse sous 24h</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-success rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">WhatsApp</h4>
+                                    <p class="text-text-secondary">+221 77 867 72 81</p>
+                                    <p class="text-sm text-text-secondary">Réponse immédiate</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1m-6 0h6m-6 0l-2 9a2 2 0 002 2h8a2 2 0 002-2l-2-9m-6 0V9a2 2 0 012-2h4a2 2 0 012 2v0"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Consultation</h4>
+                                    <p class="text-text-secondary">N'hésitez pas à nous solliciter</p>
+                                    <a href="#contact" class="text-sm text-accent hover:text-accent-600 font-medium">Envoyer nous un message</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Availability Calendar -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-text-primary mb-6">Disponibilités</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 bg-success-50 rounded-lg border border-success-200">
+                                <div>
+                                    <h4 class="font-semibold text-success-700">Septembre 2025</h4>
+                                    <p class="text-sm text-warning-600">2 créneaux disponibles</p>
+                                </div>
+                                <span class="bg-warning text-white px-3 py-1 rounded-full text-sm font-medium">Limité</span>
+                            </div>
+                            
+                            <div class="flex items-center justify-between p-4 bg-warning-50 rounded-lg border border-warning-200">
+                                <div>
+                                    <h4 class="font-semibold text-warning-700">Décembre 2025</h4>
+                                    <p class="text-sm text-success-600">1 créneau disponible</p>
+                                </div>
+                                <span class="bg-success text-white px-3 py-1 rounded-full text-sm font-medium">Disponible</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 p-4 bg-primary-50 rounded-lg border border-primary-200">
+                            <p class="text-sm text-primary-700">
+                                <strong>Réservez dès maintenant</strong> pour bénéficier des meilleurs créneaux et d'une remise de lancement !
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="public/mblue_logo.webp" alt="Logo" class="w-10 h-10" />
+                        <span class="ml-3 text-2xl font-bold">Davi Mansour Diouf</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Développeur Full-Stack et Designer basé au Sénégal. 
+                        Je transforme vos idées en sites web performants et esthétiques.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Développement Web</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Design UI/UX</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">E-commerce</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Applications Web</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Branding</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Liberté 6</li>
+                        <li>Dakar, Sénégal</li>
+                        <li>devmandf@gmail.com</li>
+                        <li>+221 77 867 72 81</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">
+                    © 2025 Davi Mansour Diouf. Tous droits réservés.
+                </p>
+                <div class="text-gray-300 text-sm">
+                    Conception du site : <a href="mailto:devmandf@gmail.com" class="text-orange-400 hover:underline font-['Jura'] font-bold">devmandf@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        // Toggle menu on button click
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent the click from reaching the document
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.classList.contains('hidden') && 
+                !mobileMenu.contains(e.target) && 
+                e.target !== mobileMenuBtn && 
+                !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when clicking on navigation links
+        document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                const icon = this.querySelector('svg');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Portfolio Filter
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-text-secondary');
+                });
+                this.classList.add('active', 'bg-primary', 'text-white');
+                this.classList.remove('bg-gray-100', 'text-text-secondary');
+                
+                // Filter portfolio items
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Custom Dropdown Functionality
+        function initializeDropdowns() {
+            const dropdowns = [
+                { btn: 'project-type-btn', dropdown: 'project-type-dropdown' },
+                { btn: 'design-complexity-btn', dropdown: 'design-complexity-dropdown' },
+                { btn: 'timeline-btn', dropdown: 'timeline-dropdown' }
+            ];
+
+            dropdowns.forEach(({ btn, dropdown }) => {
+                const button = document.getElementById(btn);
+                const dropdownMenu = document.getElementById(dropdown);
+                
+                if (!button || !dropdownMenu) return;
+                
+                const arrow = button.querySelector('svg');
+
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Close all other dropdowns
+                    dropdowns.forEach(({ dropdown: otherDropdown }) => {
+                        if (otherDropdown !== dropdown) {
+                            const otherMenu = document.getElementById(otherDropdown);
+                            const otherButton = document.getElementById(otherDropdown.replace('-dropdown', '-btn'));
+                            if (otherMenu && otherButton) {
+                                const otherArrow = otherButton.querySelector('svg');
+                                otherMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                                otherMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                                if (otherArrow) otherArrow.classList.remove('rotate-180');
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    const isOpen = dropdownMenu.classList.contains('opacity-100');
+                    
+                    if (isOpen) {
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                    } else {
+                        dropdownMenu.classList.remove('opacity-0', 'invisible', '-translate-y-2');
+                        dropdownMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        if (arrow) arrow.classList.add('rotate-180');
+                    }
+                });
+
+                // Handle option selection
+                dropdownMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('cursor-pointer')) {
+                        const selectedText = e.target.textContent;
+                        const selectedValue = e.target.getAttribute('data-value');
+                        
+                        // Update button text
+                        const buttonText = button.querySelector('span:first-child');
+                        if (buttonText) buttonText.textContent = selectedText;
+                        
+                        // Store selected value
+                        button.setAttribute('data-selected', selectedValue);
+                        
+                        // Close dropdown
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                        
+                        // Trigger price update
+                        updatePrice();
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                let clickedInside = dropdowns.some(({ btn, dropdown }) => {
+                    const button = document.getElementById(btn);
+                    const menu = document.getElementById(dropdown);
+                    return (button && button.contains(e.target)) || (menu && menu.contains(e.target));
+                });
+
+                if (!clickedInside) {
+                    dropdowns.forEach(({ dropdown }) => {
+                        const dropdownMenu = document.getElementById(dropdown);
+                        const button = document.getElementById(dropdown.replace('-dropdown', '-btn'));
+                        if (dropdownMenu && button && dropdownMenu.classList.contains('opacity-100')) {
+                            const arrow = button.querySelector('svg');
+                            dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                            dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                            if (arrow) arrow.classList.remove('rotate-180');
+                        }
+                    });
+                }
+            });
+
+            // Initialize default values
+            const projectTypeBtn = document.getElementById('project-type-btn');
+            const designComplexityBtn = document.getElementById('design-complexity-btn');
+            const timelineBtn = document.getElementById('timeline-btn');
+            
+            if (projectTypeBtn) projectTypeBtn.setAttribute('data-selected', 'landing');
+            if (designComplexityBtn) designComplexityBtn.setAttribute('data-selected', 'simple');
+            if (timelineBtn) timelineBtn.setAttribute('data-selected', 'standard');
+        }
+
+        // Initialize dropdowns when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeDropdowns);
+        } else {
+            initializeDropdowns();
+        }
+
+        // Contact Form Dropdown Functionality
+        function initializeContactDropdowns() {
+            const contactDropdowns = [
+                { btn: 'contact-project-type-btn', dropdown: 'contact-project-type-dropdown', input: 'contact-project-type-input' },
+                { btn: 'contact-budget-btn', dropdown: 'contact-budget-dropdown', input: 'contact-budget-input' }
+            ];
+
+            contactDropdowns.forEach(({ btn, dropdown, input }) => {
+                const button = document.getElementById(btn);
+                const dropdownMenu = document.getElementById(dropdown);
+                const hiddenInput = document.getElementById(input);
+                
+                if (!button || !dropdownMenu) return;
+                
+                const arrow = button.querySelector('svg');
+
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Close all other contact dropdowns
+                    contactDropdowns.forEach(({ dropdown: otherDropdown, btn: otherBtn }) => {
+                        if (otherDropdown !== dropdown) {
+                            const otherMenu = document.getElementById(otherDropdown);
+                            const otherButton = document.getElementById(otherBtn);
+                            if (otherMenu && otherButton) {
+                                const otherArrow = otherButton.querySelector('svg');
+                                otherMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                                otherMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                                if (otherArrow) otherArrow.classList.remove('rotate-180');
+                            }
+                        }
+                    });
+
+                    // Toggle current dropdown
+                    const isOpen = dropdownMenu.classList.contains('opacity-100');
+                    
+                    if (isOpen) {
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                    } else {
+                        dropdownMenu.classList.remove('opacity-0', 'invisible', '-translate-y-2');
+                        dropdownMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+                        if (arrow) arrow.classList.add('rotate-180');
+                    }
+                });
+
+                // Handle option selection
+                dropdownMenu.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('cursor-pointer')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const selectedText = e.target.textContent;
+                        const selectedValue = e.target.getAttribute('data-value');
+                        
+                        // Update button text
+                        const buttonText = button.querySelector('span:first-child');
+                        if (buttonText) buttonText.textContent = selectedText;
+                        
+                        // Update hidden input value
+                        if (hiddenInput) hiddenInput.value = selectedValue;
+                        
+                        // Close dropdown
+                        dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                        dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                        if (arrow) arrow.classList.remove('rotate-180');
+                        
+                        // Return false to prevent any default action
+                        return false;
+                    }
+                });
+            });
+
+            // Close contact dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                // Check if click is outside any contact dropdown
+                let clickedInsideDropdown = false;
+                
+                contactDropdowns.forEach(({ dropdown, btn }) => {
+                    const dropdownMenu = document.getElementById(dropdown);
+                    const button = document.getElementById(btn);
+                    
+                    if (button && button.contains(e.target)) {
+                        clickedInsideDropdown = true;
+                    }
+                    if (dropdownMenu && dropdownMenu.contains(e.target)) {
+                        clickedInsideDropdown = true;
+                    }
+                });
+                
+                // If click was outside all contact dropdowns, close them all
+                if (!clickedInsideDropdown) {
+                    contactDropdowns.forEach(({ dropdown, btn }) => {
+                        const dropdownMenu = document.getElementById(dropdown);
+                        const button = document.getElementById(btn);
+                        if (dropdownMenu && button) {
+                            const arrow = button.querySelector('svg');
+                            dropdownMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                            dropdownMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+                            if (arrow) arrow.classList.remove('rotate-180');
+                        }
+                    });
+                }
+            });
+        }
+
+        // Initialize contact dropdowns when DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeContactDropdowns);
+        } else {
+            initializeContactDropdowns();
+        }
+
+        // Pricing Calculator
+        function updatePrice() {
+            // Get selected values from custom dropdowns
+            const projectTypeBtn = document.getElementById('project-type-btn');
+            const designComplexityBtn = document.getElementById('design-complexity-btn');
+            const timelineBtn = document.getElementById('timeline-btn');
+            
+            const projectType = projectTypeBtn.getAttribute('data-selected') || 'landing';
+            const designComplexity = designComplexityBtn.getAttribute('data-selected') || 'simple';
+            const timeline = timelineBtn.getAttribute('data-selected') || 'standard';
+            
+            let basePrice = 500000; // Base price in CFA
+            
+            // Project type multiplier
+            const projectMultipliers = {
+                'landing': 1,
+                'business': 1.5,
+                'ecommerce': 3,
+                'webapp': 4
+            };
+            
+            // Design complexity multiplier
+            const designMultipliers = {
+                'simple': 1,
+                'custom': 1.5,
+                'premium': 2
+            };
+            
+            // Timeline multiplier
+            const timelineMultipliers = {
+                'standard': 1,
+                'fast': 1.3,
+                'express': 1.6
+            };
+            
+            const finalPrice = basePrice * 
+                (projectMultipliers[projectType] || 1) * 
+                (designMultipliers[designComplexity] || 1) * 
+                (timelineMultipliers[timeline] || 1);
+            
+            document.getElementById('calculated-price').textContent = 
+                `${Math.round(finalPrice).toLocaleString()} CFA`;
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+        const projectTypeInput = document.getElementById('contact-project-type-input');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = `
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Envoi en cours...
+                `;
+                submitBtn.disabled = true;
+
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successMessage.classList.remove('hidden');
+                    errorMessage.classList.add('hidden');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // Reset form fields
+                    this.reset();
+                    
+                    // Reset custom dropdowns
+                    const projectTypeBtn = document.getElementById('contact-project-type-btn');
+                    const budgetBtn = document.getElementById('contact-budget-btn');
+                    
+                    if (projectTypeBtn) {
+                        const buttonText = projectTypeBtn.querySelector('span:first-child');
+                        if (buttonText) buttonText.textContent = 'Sélectionnez votre projet';
+                    }
+                    if (budgetBtn) {
+                        const buttonText = budgetBtn.querySelector('span:first-child');
+                        if (buttonText) buttonText.textContent = 'Sélectionnez votre budget';
+                    }
+                    
+                    // Clear hidden inputs
+                    if (projectTypeInput) projectTypeInput.value = '';
+                    const budgetInput = document.getElementById('contact-budget-input');
+                    if (budgetInput) budgetInput.value = '';
+
+                } else {
+                    errorMessage.classList.remove('hidden');
+                    successMessage.classList.add('hidden');
+                    
+                    // Reset button
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+            });
+        }
+
+    </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>
