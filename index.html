@@ -995,6 +995,24 @@
         </div>
     </footer>
 
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 relative">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
+                <p class="text-gray-600 mb-6">Votre message a bien été envoyé. Je vous recontacterai dès que possible.</p>
+                <button id="close-modal" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
 
         // Mobile Menu Toggle
@@ -1329,6 +1347,15 @@
                 `${Math.round(finalPrice).toLocaleString()} CFA`;
         }
 
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            const successModal = document.getElementById('success-modal');
+            if (e.key === 'Escape' && successModal && !successModal.classList.contains('hidden')) {
+                successModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1374,13 +1401,6 @@
                 });
 
                 if (response.ok) {
-                    if (successMessage) successMessage.classList.remove('hidden');
-                    if (errorMessage) errorMessage.classList.add('hidden');
-                    
-                    // Reset button
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                    
                     // Reset form fields
                     this.reset();
                     
@@ -1401,6 +1421,34 @@
                     if (projectTypeInput) projectTypeInput.value = '';
                     const budgetInput = document.getElementById('contact-budget-input');
                     if (budgetInput) budgetInput.value = '';
+                    
+                    // Show success modal
+                    const successModal = document.getElementById('success-modal');
+                    if (successModal) {
+                        successModal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                        
+                        // Close modal when clicking the button
+                        const closeButton = document.getElementById('close-modal');
+                        if (closeButton) {
+                            closeButton.addEventListener('click', function() {
+                                successModal.classList.add('hidden');
+                                document.body.style.overflow = ''; // Re-enable scrolling
+                            });
+                        }
+                        
+                        // Close when clicking outside the modal
+                        successModal.addEventListener('click', function(e) {
+                            if (e.target === successModal) {
+                                successModal.classList.add('hidden');
+                                document.body.style.overflow = ''; // Re-enable scrolling
+                            }
+                        });
+                    }
+                    
+                    // Reset button after showing modal
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
 
                 } else {
                     errorMessage.classList.remove('hidden');
