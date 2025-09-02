@@ -626,8 +626,10 @@
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                         <a href="https://itamax.fr" target="_blank" class="block">
                             <div class="relative overflow-hidden">
-                                <img src="public/itamax_fr.webp" alt="itamax.fr - Cabinet d'architecture" class="hidden md:block w-full h-80 object-cover transition-all duration-300" loading="lazy" />
-<img src="public/itamax_fr_mobile.webp" alt="itamax.fr - Cabinet d'architecture" class="block md:hidden w-full h-80 object-cover transition-all duration-300" loading="lazy" />
+                                <picture>
+                                    <source srcset="public/itamax_fr_mobile.webp" media="(max-width: 768px) and (hover: none) and (pointer: coarse)">
+                                    <img src="public/itamax_fr.webp" alt="itamax.fr - Cabinet d'architecture" class="w-full h-80 object-cover transition-all duration-300" loading="lazy">
+                                </picture>
                                 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                 <div class="text-center text-white">
                                     <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
