@@ -1909,16 +1909,16 @@ body {
   padding-bottom: 4rem;
 }
 
+.pr-\[17px\]{
+  padding-right: 17px;
+}
+
 .pt-32{
   padding-top: 8rem;
 }
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pr-\[17px\]{
-  padding-right: 17px;
 }
 
 .text-left{
@@ -2580,6 +2580,10 @@ body {
 @media (min-width: 768px){
   .md\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+
+  .md\:block{
+    display: block;
   }
 
   .md\:flex{
