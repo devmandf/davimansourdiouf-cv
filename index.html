@@ -1058,11 +1058,25 @@
             </div>
             
             <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-300 text-sm">
+                <!-- Version desktop (cachée sur mobile) -->
+                <p class="text-gray-300 text-sm hidden md:block">
                     © 2025 Davi Mansour Diouf. Tous droits réservés.
                 </p>
-                <div class="text-gray-300 text-sm">
+                <div class="text-gray-300 text-sm hidden md:block">
                     Conception du site : <a href="mailto:devmandf@gmail.com" class="text-orange-400 hover:underline font-['Jura'] font-bold">devmandf@gmail.com</a>
+                </div>
+                
+                <!-- Version mobile (cachée sur desktop) -->
+                <div class="flex flex-col items-center space-y-2 md:hidden w-full">
+                    <p class="text-gray-300 text-sm text-center">
+                        © 2025 Davi Mansour Diouf.
+                    </p>
+                    <p class="text-gray-300 text-sm text-center">
+                        Tous droits réservés.
+                    </p>
+                    <p class="text-gray-300 text-sm text-center">
+                        Conception du site : <a href="mailto:devmandf@gmail.com" class="text-orange-400 hover:underline font-['Jura'] font-bold">devmandf@gmail.com</a>
+                    </p>
                 </div>
             </div>
         </div>
