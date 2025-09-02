@@ -51,6 +51,19 @@
   #mobile-menu:not(.translate-x-full) #close-mobile-menu {
     transform: translateX(-1.5rem) !important;
   }
+
+  /* Responsive: bouton "Envoyer ma demande" plus petit sur mobile */
+  @media only screen and (max-width: 768px) and (hover: none) and (pointer: coarse) {
+    #contact-form .btn-primary {
+      font-size: 1rem !important;
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+      /* Optionnel: réduire le padding horizontal si besoin */
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      white-space: nowrap !important;
+    }
+  }
 </style>
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdaviportf6336back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -259,8 +272,6 @@
                         <div class="flex items-start space-x-3">
                             <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-red-700">Problèmes de communication entre équipes</span>
                         </div>
                         <div class="flex items-start space-x-3">
                             <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -468,7 +479,7 @@
                                 <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                                    </svg>
+                                </svg>
                                 </div>
                                 <div class="flex-1">
                                     <h3 class="text-2xl font-bold text-text-primary mb-2 group-hover:text-primary transition-colors">Développeur WEB Freelance</h3>
@@ -518,7 +529,7 @@
                                 <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                    </svg>
+                                </svg>
                                 </div>
                                 <div class="flex-1">
                                     <h3 class="text-2xl font-bold text-text-primary mb-2 group-hover:text-accent transition-colors">Stagiaire au Service Transit</h3>
@@ -799,7 +810,7 @@
                 <div class="mt-12 bg-white rounded-2xl shadow-lg p-8 lg:col-span-2">
                 <h3 class="text-2xl font-bold text-text-primary mb-6 flex items-center">
                     <svg class="w-6 h-6 mr-2 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6h2m7-6h2m2 3h2m-4 3h4M7 7h10"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                     </svg>
                     Autres Compétences
                 </h3>
@@ -875,7 +886,7 @@
                             <input type="hidden" name="_next" value="https://mansourdiouf.com/merci.html">
                             <input type="hidden" name="_captcha" value="false">
                             <label class="block text-sm font-semibold text-text-primary mb-3">Type de projet </label>
-                            <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50" id="contact-project-type-btn">
+                            <button class="w-full bg-white border-2 border-gray-200 rounded-xl px-4 py-3 text-left hover:border-primary hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" id="contact-project-type-btn">
                                 <span class="flex items-center justify-between">
                                     <span class="text-text-primary">Sélectionnez votre projet</span>
                                     <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
