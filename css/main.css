@@ -2554,6 +2554,10 @@ body {
 }
 
 @media (min-width: 640px){
+  .sm\:-right-2{
+    right: -0.5rem;
+  }
+
   .sm\:w-auto{
     width: auto;
   }
@@ -2578,6 +2582,10 @@ body {
 }
 
 @media (min-width: 768px){
+  .md\:-right-4{
+    right: -1rem;
+  }
+
   .md\:col-span-2{
     grid-column: span 2 / span 2;
   }
